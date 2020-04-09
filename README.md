@@ -58,13 +58,13 @@ Mood-board:
 
 ## Technology used
 
-React
-Redux
-Express
-REST API
-Sequelize
-React-Bootstrap
-NodeJS
+- React
+- Redux
+- Express
+- REST API
+- Sequelize
+- React-Bootstrap
+- NodeJS
 
 ## Wireframe
 
