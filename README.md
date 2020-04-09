@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Furniture-moodboard-sell-app-client
 
-## Available Scripts
+# Market place/mood-board for second hand furniture
+With a style check before showing on webpage to sell.  Being able to sell, search, bid, comment, inspire and connect.
 
-In the project directory, you can run:
+What is the idea:
+A marketplace for second hand furniture, with a feature to make mood-boards to show what you are searching for as a (potential)buyer. The app has the following features:
 
-### `npm start`
+Being able to:
+-	Have an account that show the furniture you sell (marketplace style)
+-	Create a mood-board on your own “user-Page”, to show what you are looking for 
+-	Bid on furniture 
+-	Communicate with seller/buyer
+-	Add photo’s from your computer to your mood-board (being able to drag them into board?)
+-	Add likes to mood-board
+-	Comment to mood-board
+-	Being able to follow user
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+(Also; to make sure the app has a certain number of style/trends, not all furniture can be placed on there. This has to be checked, before the user can add it to the webpage. To control the assortment on the webpage)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+What world problem are we solving:
+•	Helps with saving money 
+•	Environmental savings
+•	Brings people together
+•	Staying away from bad styling
 
-### `npm test`
+ 
+## User stories
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+General
+-	As a person who is interested in reducing their personal impact on the environment, I want to be able to reduce it by giving my non used furniture new life.
+-	As a person who is interesting to earn some (easy) money, I want to be able to sell my non used furniture
+-	As a person who want to save money, I want to be able to buy furniture, according to the latest trends, but not for the original price.
 
-### `npm run build`
+Webpage:
+-	As a user, I can create an account
+-	As a user I want to be able to login
+-	As a user I want to have my personal page, with the products I sell and my Mood-board(s)
+-	As a user I want to be able to create a product add (name, description, image, price)
+-	As a user I want to be able to create a mood-board
+-	As a user I want to be able to see other user-profiles (with products add’s/mood-boards)
+-	As a user I want to see product details, when clicked on
+-	As a shopper I don’t want to go over a million searching results to find something I am looking for
+-	As a user I want to be able to send another user a message
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Products: 
+-	As a user, I want to be able to Bid on a product
+-	As a user I want to see the previous bids from other users (highest on top)
+-	As a user I want to see a picture, description, (advice)price
+-	As a user I want to see from which user the product is
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Mood-board:
+-	As a user I want to be inspired by other users 
+-	As a user I want to be able to create a mood-board
+-	As a user I want to be able to add the mood-board to my personal page
+-	As a user I want to be able to upload my own pictures into my mood-board (drop and drag)
+-	As a user I want to be able to comment on a mood-board
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Wireframe
 
-### `npm run eject`
+![Wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C1617280e6a2e44c6bb041347ca13a543/projects/M29f204c619d74c9f759c926d971e93531583164575624/pages/d086442dea3b41bead1789f87ec8df5a/image/d086442dea3b41bead1789f87ec8df5a.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
