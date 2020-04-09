@@ -1,4 +1,4 @@
-# Furniture-moodboard-sell-app-client
+# Furniture-Marketplace-client
 
 # Market place/mood-board for second hand furniture
 With a style check before showing on webpage to sell.  Being able to sell, search, bid, comment, inspire and connect.
