@@ -1,5 +1,11 @@
 # Furniture-Marketplace-client
 
+## DEMO - (Inn progress - latest update)
+
+![Demo](https://github.com/Lauraklijn/Furniture_marketplace-client/blob/master/src/Schermafbeelding%202020-04-09%20om%2015.55.53.png)
+
+![Demo](https://github.com/Lauraklijn/Furniture_marketplace-client/blob/master/src/Schermafbeelding%202020-04-09%20om%2015.58.14.png)
+
 # Market place/mood-board for second hand furniture
 With a style check before showing on webpage to sell.  Being able to sell, search, bid, comment, inspire and connect.
 
@@ -56,6 +62,7 @@ Mood-board:
 -	As a user I want to be able to upload my own pictures into my mood-board (drop and drag)
 -	As a user I want to be able to comment on a mood-board
 
+
 ## Technology used
 
 - React
@@ -70,5 +77,6 @@ Mood-board:
 
 ![Wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C1617280e6a2e44c6bb041347ca13a543/projects/M29f204c619d74c9f759c926d971e93531583164575624/pages/d086442dea3b41bead1789f87ec8df5a/image/d086442dea3b41bead1789f87ec8df5a.png)
 
-![Demo](https://github.com/Lauraklijn/Furniture_marketplace-client/blob/master/src/Schermafbeelding%202020-04-09%20om%2015.55.53.png)
+
+
 
