@@ -70,3 +70,5 @@ Mood-board:
 
 ![Wireframe](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C1617280e6a2e44c6bb041347ca13a543/projects/M29f204c619d74c9f759c926d971e93531583164575624/pages/d086442dea3b41bead1789f87ec8df5a/image/d086442dea3b41bead1789f87ec8df5a.png)
 
+![Demo](https://github.com/Lauraklijn/Furniture_marketplace-client/blob/master/src/Schermafbeelding%202020-04-09%20om%2015.55.53.png)
+
