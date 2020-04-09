@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import appState from "./appState/appState-reducer";
-import userReducer from "./user/user-reducer";
+import appState from "./appState/reducer";
+import user from "./user/reducer";
+import homepages from "./homepages/reducer";
+import homepageDetails from "./homepageDetails/reducer";
 
 export default combineReducers({
   appState,
-  userReducer
+  user,
+  homepages,
+  homepageDetails
 });

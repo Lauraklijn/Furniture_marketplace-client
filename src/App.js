@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
-import Navigation from "./components/Navigation/Nav-index";
 
-const Home = () => <h1>Home</h1>;
-const Test = () => <h1>Test</h1>;
+import { Switch, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Loading from "./components/Loading";
+import MessageBox from "./components/MessageBox";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import MyHomepage from "./pages/MyHomepage";
+import Homepages from "./pages/Homepages";
+import HomepageDetails from "./pages/HomepageDetails";
+import ProductDetails from "./pages/ProductDetails";
+
+import { useDispatch, useSelector } from "react-redux";
+import { selectAppLoading } from "./store/appState/selectors";
+import { getUserWithStoredToken } from "./store/user/actions";
 
 function App() {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectAppLoading);
+
+  useEffect(() => {
+    dispatch(getUserWithStoredToken());
+  }, [dispatch]);
+
   return (
     <div className="App">
       <Navigation />
+      <MessageBox />
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/other" component={Test} />
+        {isLoading ? <Loading /> : null}
+        <Route exact path="/" component={Homepages} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
+        <Route path="/myhomepage" component={MyHomepage} />
+        <Route path="/homepages/:id" component={HomepageDetails} />
+        <Route path="/productdetails" component={ProductDetails} />
       </Switch>
     </div>
   );
