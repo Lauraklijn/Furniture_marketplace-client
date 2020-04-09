@@ -1,6 +1,6 @@
 # Furniture-Marketplace-client
 
-## DEMO - (Inn progress - latest update)
+## DEMO - (In progress - latest update)
 
 ![Demo](https://github.com/Lauraklijn/Furniture_marketplace-client/blob/master/src/Schermafbeelding%202020-04-09%20om%2015.55.53.png)
 
