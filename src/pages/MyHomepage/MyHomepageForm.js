@@ -11,17 +11,14 @@ export default function MyHomepageForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState(homepage.title);
   const [description, setDescription] = useState(homepage.description || "");
-  // const [backgroundColor, setBackgroundColor] = useState(
-  //   homepage.backgroundColor
-  // );
-  //const [color, setColor] = useState(homepage.color);
+  const [imageUrl, setimageUrl] = useState(homepage.imageUrl);
 
   function submitForm(event) {
     event.preventDefault();
 
-    console.log("Form homepage", title, description);
-    // dispatch(updateMyPage(title, description, backgroundColor, color));
-    dispatch(updateMyPage(title, description));
+    console.log("Form homepage?", title, description, imageUrl);
+
+    dispatch(updateMyPage(title, description, imageUrl));
   }
   return (
     <Form as={Col} md={{ span: 6, offset: 3 }} className="mt-5">
@@ -43,25 +40,19 @@ export default function MyHomepageForm() {
           value={description}
           onChange={event => setDescription(event.target.value)}
           type="text"
-          placeholder="What is your page about"
+          placeholder="Description about the product"
         />
       </Form.Group>
-      {/* <Form.Group>
-        <Form.Label>Background Color</Form.Label>
+      <Form.Group>
+        <Form.Label>Image</Form.Label>
         <Form.Control
-          value={backgroundColor}
-          onChange={event => setBackgroundColor(event.target.value)}
-          type="color"
+          value={imageUrl}
+          onChange={event => setimageUrl(event.target.value)}
+          type="tekst"
+          placeholder="Add image"
         />
-      </Form.Group> */}
-      {/* <Form.Group>
-        <Form.Label>Text Color</Form.Label>
-        <Form.Control
-          value={color}
-          onChange={event => setColor(event.target.value)}
-          type="color"
-        />
-      </Form.Group> */}
+      </Form.Group>
+
       <Form.Group className="mt-5">
         <Button variant="outline-secondary" type="submit" onClick={submitForm}>
           Save changes

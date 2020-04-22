@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 import { useDispatch } from "react-redux";
 import { postProduct } from "../../store/user/actions";
-//import AddImage from "../../components/Images/AddImage";
+import AddImage from "../../components/Images/AddImage";
 
 export default function MyHomepageForm() {
   const dispatch = useDispatch();
@@ -21,6 +21,20 @@ export default function MyHomepageForm() {
     // console.log(description, imageUrl, price, productInfo, city);
     dispatch(postProduct(description, imageUrl, price, productInfo, city));
   }
+
+  // how to implement it with hooks
+  // handleImageState = imageUrl => {
+  //   console.log("WHAT IS ImgURL?", imageUrl);
+  //   console.log("WHAT IS THIS", this.handleImageState);
+  //   this.setState({ image: imageUrl });
+  //   console.log("CHeck state", this.state);
+  // };
+
+  // handleInputs = event => {
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   });
+  // };
 
   return (
     <Form as={Col} md={{ span: 6, offset: 3 }}>
@@ -64,6 +78,14 @@ export default function MyHomepageForm() {
         />
       </Form.Group>
       <Form.Group>
+        <AddImage
+        // type="text"
+        // name="image"
+        // placeholder="Add image"
+        // value={this.state.image}
+        // onChange={this.handleInputs}
+        // handleImageState={this.handleImageState}
+        />
         <Form.Label>Image url</Form.Label>
         <Form.Control
           value={imageUrl}

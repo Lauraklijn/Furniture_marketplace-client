@@ -40,11 +40,6 @@ export const productPostSuccess = product => ({
   payload: product
 });
 
-// export const storyDeleteSuccess = storyId => ({
-//   type: STORY_DELETE_SUCCESS,
-//   payload: storyId
-// });
-
 export const signUp = (name, email, password, imageUrl) => {
   return async (dispatch, getState) => {
     dispatch(appLoading());
@@ -87,10 +82,10 @@ export const login = (email, password) => {
     } catch (error) {
       if (error.response) {
         // console.log(error.response.data.message);
-        dispatch(setMessage("danger", true, error.response.data.message));
+        dispatch(setMessage("error", true, error.response.data.message));
       } else {
         // console.log(error.message);
-        dispatch(setMessage("danger", true, error.message));
+        dispatch(setMessage("error", true, error.message));
       }
       dispatch(appDoneLoading());
     }
@@ -119,16 +114,13 @@ export const getUserWithStoredToken = () => {
     } catch (error) {
       // console.log(error.response.message);
 
-      // if we get a 4xx or 5xx response,
-      // get rid of the token by logging out
       dispatch(logOut());
       dispatch(appDoneLoading());
     }
   };
 };
 
-//export const updateMyPage = (title, description, backgroundColor, color)
-export const updateMyPage = (title, description) => {
+export const updateMyPage = (title, description, imageUrl) => {
   return async (dispatch, getState) => {
     const { homepage, token } = selectUser(getState());
     dispatch(appLoading());
@@ -137,9 +129,8 @@ export const updateMyPage = (title, description) => {
       `${apiUrl}/homepages/${homepage.id}`,
       {
         title,
-        description
-        // backgroundColor,
-        // color
+        description,
+        imageUrl
       },
       {
         headers: {
@@ -193,7 +184,7 @@ export const postProduct = (
       }
     );
 
-    // console.log("Yep!", response);
+    // console.log("Response postproduct?", response);
     dispatch(
       showMessageWithTimeout("success", false, response.data.message, 3000)
     );

@@ -36,8 +36,7 @@ export default function MyHomepage() {
         id={homepage.id}
         title={homepage.title}
         description={homepage.description}
-        //backgroundColor={homepage.backgroundColor}
-        //color={homepage.color}
+        image={homepage.imageUrl}
         showLink={false}
       />
       <Container>
