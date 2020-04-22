@@ -5,12 +5,8 @@ import Button from "react-bootstrap/Button";
 import { CardColumns } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-//import { useDispatch } from "react-redux";
-
 export default function Products(props) {
-  //console.log("What is props products", props);
-  // const dispatch = useDispatch();
-
+  console.log("What is props products", props.homepage.products);
   return (
     <div>
       <CardColumns className="mt-5">

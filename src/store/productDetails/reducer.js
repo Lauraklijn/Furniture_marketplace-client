@@ -5,7 +5,7 @@ const initialState = {};
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case PRODUCT_DETAILS_FETCHED:
-      console.log("state?", state);
+      console.log("What is state in reducer?", state);
       return { ...state, ...payload };
 
     default:

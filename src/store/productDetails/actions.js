@@ -13,7 +13,7 @@ export const fetchProductById = id => {
     const response = await axios.get(
       `${apiUrl}/homepages/${id}/products/${id}`
     );
-    console.log("PRODUCTdetials fetched", response.data.product);
-    dispatch(productDetailsFetched(response.data.product));
+    console.log("Productdetails fetched", response.data);
+    dispatch(productDetailsFetched(response.data));
   };
 };
