@@ -13,8 +13,13 @@ export default function Homepage(props) {
     >
       <h3>{props.title}</h3>
       <p>{props.description}</p>
-
-      <p>{props.imageUrl}</p>
+      <img
+        src={props.image}
+        width="100"
+        height="100"
+        className="d-inline-block align-left"
+        alt="Userpage image"
+      />
 
       {props.showLink ? (
         <Link to={`/homepages/${props.id}`}>

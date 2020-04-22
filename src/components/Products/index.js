@@ -20,12 +20,13 @@ export default function Products(props) {
               <Card.Img variant="top" src={product.imageUrl} />
               <Card.Body>
                 <Card.Title>{product.description}</Card.Title>
-                <Card.Text>{product.price}</Card.Text>
+                <Card.Text>€{product.price}</Card.Text>
                 <Card.Text>{product.productInfo}</Card.Text>
-                <Card.Text>{product.city}</Card.Text>
+
                 <Link to={`/products/${product.id}`}>
                   <Button variant="outline-secondary">See details</Button>
                 </Link>
+                <Card.Text>{product.city}</Card.Text>
               </Card.Body>
             </Card>
           );

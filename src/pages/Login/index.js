@@ -58,7 +58,7 @@ export default function SignUp() {
           />
         </Form.Group>
         <Link to="/signup" style={{ textAlign: "center" }}>
-          Click here to sign up WHERE IS IT
+          Click here to sign up
         </Link>
         <Form.Group className="mt-5">
           <Button variant="primary" type="submit" onClick={submitForm}>

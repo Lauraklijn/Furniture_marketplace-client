@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
@@ -13,11 +13,19 @@ import FormControl from "react-bootstrap/FormControl";
 export default function HomePages() {
   const dispatch = useDispatch();
   const homepages = useSelector(selectHomepages);
+  const [search, setSearch] = useState("");
+
+  console.log("what is search", homepages);
 
   useEffect(() => {
     dispatch(fetchHomepages());
   }, [dispatch]);
 
+  const filterHomepages = homepages.filter(homepages => {
+    return homepages.title.toLowerCase().includes(search.toLowerCase());
+  });
+
+  console.log("Test filter", filterHomepages);
   return (
     <>
       <Jumbotron
@@ -36,7 +44,12 @@ export default function HomePages() {
         <h1>Wees Duurzaam </h1>
         <h3>Eenvoudig tweedehands meubels kopen & verkopen</h3>
         <Form inline>
-          <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
+          <FormControl
+            type="text"
+            placeholder="Search for a homepage"
+            className=" mr-sm-2"
+            onChange={e => setSearch(e.target.value)}
+          />
           <Button variant="outline-secondary" type="submit">
             Submit
           </Button>
@@ -45,7 +58,7 @@ export default function HomePages() {
 
       <Container>
         <h2>Homepages</h2>
-        {homepages.map(homepage => {
+        {filterHomepages.map(homepage => {
           console.log("Homepages?", homepage);
           return (
             <Homepage
