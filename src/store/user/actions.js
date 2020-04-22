@@ -127,7 +127,8 @@ export const getUserWithStoredToken = () => {
   };
 };
 
-export const updateMyPage = (title, description, backgroundColor, color) => {
+//export const updateMyPage = (title, description, backgroundColor, color)
+export const updateMyPage = (title, description) => {
   return async (dispatch, getState) => {
     const { homepage, token } = selectUser(getState());
     dispatch(appLoading());
@@ -136,9 +137,9 @@ export const updateMyPage = (title, description, backgroundColor, color) => {
       `${apiUrl}/homepages/${homepage.id}`,
       {
         title,
-        description,
-        backgroundColor,
-        color
+        description
+        // backgroundColor,
+        // color
       },
       {
         headers: {

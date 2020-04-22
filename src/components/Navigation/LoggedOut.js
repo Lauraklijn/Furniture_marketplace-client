@@ -4,7 +4,7 @@ import NavbarItem from "./NavbarItem";
 export default function LoggedOut() {
   return (
     <>
-      <NavbarItem path="/login" linkText="Login" />
+      <NavbarItem className="ml-auto" path="/login" linkText="Login" />
     </>
   );
 }

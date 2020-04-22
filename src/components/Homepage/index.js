@@ -7,9 +7,7 @@ export default function Homepage(props) {
   return (
     <Jumbotron
       style={{
-        //backgroundColor: props.backgroundColor,
-        backgroundColor: "rgba(255, 228, 228, 0.603)",
-        color: props.color
+        backgroundColor: "rgba(255, 228, 228, 0.603)"
       }}
     >
       <h3>{props.title}</h3>

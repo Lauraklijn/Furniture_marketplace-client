@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
     case HOMEPAGE_UPDATED:
       return {
         ...state,
-        homepage: { ...action.payload, stories: state.homepage.stories }
+        homepage: { ...action.payload, products: state.homepage.products }
       };
 
     case PRODUCT_POST_SUCCESS:

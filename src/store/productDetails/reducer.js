@@ -1,15 +1,14 @@
-// import { PRODUCT_DETAILS_FETCHED } from "./actions";
+import { PRODUCT_DETAILS_FETCHED } from "./actions";
 
-// const initialState = {
-//   productdetails: []
-// };
+const initialState = {};
 
-// export default (state = initialState, { type, payload }) => {
-//   switch (type) {
-//     case PRODUCT_DETAILS_FETCHED:
-//       return { ...state, ...payload };
+export default (state = initialState, { type, payload }) => {
+  switch (type) {
+    case PRODUCT_DETAILS_FETCHED:
+      console.log("state?", state);
+      return { ...state, ...payload };
 
-//     default:
-//       return state;
-//   }
-// };
+    default:
+      return state;
+  }
+};

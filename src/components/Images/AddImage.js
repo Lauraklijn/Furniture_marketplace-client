@@ -24,7 +24,7 @@ function AddImage(props) {
     console.log("image Url ", file);
     setImage(file.secure_url);
     setLoading(false);
-    //handleImageState(file.secure_url);
+    handleImageState(file.secure_url);
   };
 
   return (
@@ -34,7 +34,7 @@ function AddImage(props) {
         name="file"
         placeholder="Upload an image"
         onChange={uploadImage(handleImageState)}
-        // onChange={handleImageState}
+        onChange={handleImageState}
       />
 
       {loading ? (

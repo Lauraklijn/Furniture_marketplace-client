@@ -33,7 +33,7 @@ export default function HomePages() {
           height: "600px"
         }}
       >
-        <h1>Vind Jouw Duurzame Droominterieur </h1>
+        <h1>Wees Duurzaam </h1>
         <h3>Eenvoudig tweedehands meubels kopen & verkopen</h3>
         <Form inline>
           <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
@@ -53,8 +53,8 @@ export default function HomePages() {
               id={homepage.id}
               title={homepage.title}
               description={homepage.description}
-              backgroundColor={homepage.backgroundColor}
-              color={homepage.color}
+              //backgroundColor={homepage.backgroundColor}
+              //color={homepage.color}
               showLink={true}
             />
           );

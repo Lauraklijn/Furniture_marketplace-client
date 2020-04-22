@@ -9,13 +9,18 @@ export default function LoggedIn() {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   return (
-    <div className="d-flex ml-3">
+    <div className="d-flex ml-5">
       <Nav.Item style={{ padding: ".5rem 1rem" }}>
         {" "}
         Logged in as:
         {user.name}
       </Nav.Item>
-      <Button variant="secondary" size="sm" onClick={() => dispatch(logOut())}>
+      <Button
+        className="ml-auto"
+        variant="secondary"
+        size="sm"
+        onClick={() => dispatch(logOut())}
+      >
         Logout
       </Button>
     </div>

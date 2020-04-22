@@ -35,7 +35,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/myhomepage" component={MyHomepage} />
         <Route path="/homepages/:id" component={HomepageDetails} />
-        <Route path="/productdetails" component={ProductDetails} />
+        <Route path="/products/:id" component={ProductDetails} />
       </Switch>
     </div>
   );

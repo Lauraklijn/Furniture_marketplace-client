@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 //import { useDispatch } from "react-redux";
 
 export default function Products(props) {
+  //console.log("What is props products", props);
   // const dispatch = useDispatch();
 
   return (
@@ -22,7 +23,7 @@ export default function Products(props) {
                 <Card.Text>{product.price}</Card.Text>
                 <Card.Text>{product.productInfo}</Card.Text>
                 <Card.Text>{product.city}</Card.Text>
-                <Link to={`/productdetails/${props.id}`}>
+                <Link to={`/products/${product.id}`}>
                   <Button variant="outline-secondary">See details</Button>
                 </Link>
               </Card.Body>
