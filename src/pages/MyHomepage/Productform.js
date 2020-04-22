@@ -23,18 +23,19 @@ export default function MyHomepageForm() {
   }
 
   // how to implement it with hooks
-  // handleImageState = imageUrl => {
-  //   console.log("WHAT IS ImgURL?", imageUrl);
-  //   console.log("WHAT IS THIS", this.handleImageState);
-  //   this.setState({ image: imageUrl });
-  //   console.log("CHeck state", this.state);
-  // };
+  const handleImageState = imageUrl => {
+    console.log("WHAT IS ImgURL?", imageUrl);
+    console.log("WHAT IS THIS", handleImageState);
+    setImageUrl({ ...imageUrl, image: imageUrl });
 
-  // handleInputs = event => {
-  //   this.setState({
-  //     [event.target.name]: event.target.value
-  //   });
-  // };
+    console.log("CHeck state", setImageUrl());
+  };
+
+  const handleInputs = event => {
+    setImageUrl({
+      [event.target.name]: event.target.value
+    });
+  };
 
   return (
     <Form as={Col} md={{ span: 6, offset: 3 }}>
@@ -77,23 +78,24 @@ export default function MyHomepageForm() {
           placeholder="Fill in your city"
         />
       </Form.Group>
+      <Form.Label>Image url</Form.Label>
       <Form.Group>
         <AddImage
-        // type="text"
-        // name="image"
-        // placeholder="Add image"
-        // value={this.state.image}
-        // onChange={this.handleInputs}
-        // handleImageState={this.handleImageState}
+          type="text"
+          name="image"
+          placeholder="Add image"
+          value={imageUrl}
+          onChange={handleInputs}
+          handleImageState={handleImageState}
         />
-        <Form.Label>Image url</Form.Label>
-        <Form.Control
+
+        {/* <Form.Control
           value={imageUrl}
           onChange={event => setImageUrl(event.target.value)}
           type="text"
           placeholder="Please add a picture of the product"
           //handleImageState={this.handleImageState}
-        />
+        /> */}
       </Form.Group>
 
       <Form.Group className="mt-5">
