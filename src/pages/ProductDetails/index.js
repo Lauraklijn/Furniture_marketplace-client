@@ -7,6 +7,7 @@ import { selectProductDetails } from "../../store/productDetails/selectors";
 import Card from "react-bootstrap/Card";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Button from "react-bootstrap/Button";
+import EmailContainer from "../../components/Email/index";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -24,7 +25,7 @@ export default function ProductDetails() {
           <Card.Img variant="top" src={product.imageUrl} />
           <Card.Body>
             <svg
-              class="bi bi-geo-alt"
+              className="bi bi-geo-alt"
               width="2em"
               height="1em"
               viewBox="0 0 16 16"
@@ -49,6 +50,7 @@ export default function ProductDetails() {
           <Button variant="secondary">Stuur bericht naar verkoper</Button>
         </Card>
         <br />
+        <EmailContainer />
       </Container>
     </>
   );

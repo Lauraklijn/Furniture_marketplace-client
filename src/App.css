@@ -47,3 +47,9 @@
 .font-face {
   font-family: 'Playfair Display', serif;
 }
+
+.Productdetails{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: "500px";
+  }

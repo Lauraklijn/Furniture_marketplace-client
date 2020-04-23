@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function AddImage(props) {
-  const [image, setImage] = useState("");
+  const [imageUrl, setImage] = useState("");
   const [loading, setLoading] = useState(false);
   const { handleImageState } = props;
 
@@ -34,13 +34,13 @@ function AddImage(props) {
         name="file"
         placeholder="Upload an image"
         onChange={uploadImage(handleImageState)}
-        onChange={handleImageState}
+        //onChange={handleImageState}
       />
 
       {loading ? (
         <h3>Loading...</h3>
       ) : (
-        <img src={image} alt="" style={{ width: "300px" }} />
+        <img src={imageUrl} alt="" style={{ width: "300px" }} />
       )}
     </div>
   );

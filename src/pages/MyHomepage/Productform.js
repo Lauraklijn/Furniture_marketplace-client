@@ -23,12 +23,11 @@ export default function MyHomepageForm() {
   }
 
   // how to implement it with hooks
-  const handleImageState = imageUrl => {
-    console.log("WHAT IS ImgURL?", imageUrl);
-    console.log("WHAT IS THIS", handleImageState);
-    setImageUrl({ ...imageUrl, image: imageUrl });
+  const handleImageState = event => {
+    console.log("WHAT IS ImgURL?", event);
 
-    console.log("CHeck state", setImageUrl());
+    setImageUrl(event);
+    console.log("what is handleimage", handleImageState);
   };
 
   const handleInputs = event => {
