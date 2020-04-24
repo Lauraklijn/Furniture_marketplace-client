@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Media from "react-bootstrap/Media";
 import Card from "react-bootstrap/Card";
+import "../Navigation/navigation.css";
 
 export default function Homepage(props) {
   console.log("props homepage?", props);
@@ -24,13 +25,13 @@ export default function Homepage(props) {
           alt="Generic placeholder"
         />
         <Media.Body>
-          <Link className="text-dark " to={`/homepages/${props.id}`}>
-            <div className="font-weight-bold mt-2 text-sm-left">
+          <Link className="font-logo" to={`/homepages/${props.id}`}>
+            <div className="font-weight-bold mt-2 text-sm-left text-dark">
               {props.title}
             </div>
           </Link>
 
-          <p className="text-sm-left mt-1 font-italic">{props.description}</p>
+          <p className="text-sm-left mt-3 font-italic">{props.description}</p>
         </Media.Body>
       </Media>
     </ul>

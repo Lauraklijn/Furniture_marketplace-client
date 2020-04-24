@@ -42,15 +42,33 @@ export default function MyHomepage() {
       <Container>
         {displayButtons ? (
           <Card>
-            <Button variant="secondary" onClick={() => setEditMode(true)}>
+            <Button
+              variant="outline-light"
+              style={{
+                backgroundColor: "hsl(20, 2%, 74%)"
+              }}
+              onClick={() => setEditMode(true)}
+            >
               Edit my page
             </Button>
             <Button
-              variant="secondary"
+              variant="outline-light"
+              style={{
+                backgroundColor: "hsl(20, 2%, 74%)"
+              }}
               onClick={() => setpostProductMode(true)}
               className="mt-2"
             >
-              Create a product to sell
+              <a>
+                <img
+                  src="https://cdn.dribbble.com/users/17577/screenshots/1478281/furniture.png"
+                  width="25"
+                  height="25"
+                  className="d-inline-block align-top"
+                  alt="Userpage"
+                />{" "}
+              </a>
+              Verkopen
             </Button>
           </Card>
         ) : null}

@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CardColumns } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "../Navigation/navigation.css";
 
 export default function Products(props) {
   console.log("What is props products", props.homepage.products);
@@ -22,11 +23,18 @@ export default function Products(props) {
             >
               <Card.Img variant="top" src={product.imageUrl} />
               <Card.Body width={100} height={100}>
-                <Card.Title>{product.description}</Card.Title>
-                <Card.Text>€{product.price}</Card.Text>
+                <Card.Title className="font-logo">
+                  {product.description}
+                </Card.Title>
+                <Card.Text className="font-italic">
+                  <a>€ </a>
+                  {product.price}
+                </Card.Text>
 
                 <Link to={`/products/${product.id}`}>
-                  <Button variant="outline-secondary">See details</Button>
+                  <Button variant="outline-secondary">
+                    See product details
+                  </Button>
                 </Link>
               </Card.Body>
             </Card>

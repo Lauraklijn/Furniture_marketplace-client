@@ -9,6 +9,7 @@ import "../../App.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
+import "../../components/Navigation/navigation.css";
 
 export default function HomePages() {
   const dispatch = useDispatch();
@@ -81,7 +82,7 @@ export default function HomePages() {
       </Jumbotron>
 
       <Container>
-        <h2>Homepages</h2>
+        <h2 className="font-logo">Homepages</h2>
         <br />
         {filterHomepages.map(homepage => {
           console.log("Homepages?", homepage);

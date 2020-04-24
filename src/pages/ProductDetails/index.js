@@ -11,6 +11,7 @@ import EmailContainer from "../../components/Email/index";
 import Col from "react-bootstrap/Col";
 import { CardColumns } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
+import "../../components/Navigation/navigation.css";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -27,8 +28,13 @@ export default function ProductDetails() {
           <Col className="mt-5" xs={12} md={8}>
             <CardColumns>
               <Card className="align-middle" style={{ width: "40rem" }}>
-                <Card.Text className="mt-2">
-                  <h4> {product.description}</h4>{" "}
+                <Card.Text
+                  className="mt-2 border border-light"
+                  style={{
+                    backgroundColor: "rgba(255, 228, 228, 0.603)"
+                  }}
+                >
+                  <h4 className="font-logo"> {product.description}</h4>{" "}
                 </Card.Text>
                 <Card.Img variant="top" src={product.imageUrl} />
                 <Card.Body>
@@ -56,8 +62,13 @@ export default function ProductDetails() {
                     </div>
                     <div className="font-italic">{product.productInfo}</div>
                     <br /> <br />
-                    <ListGroupItem>
-                      Vraagprijs: €{product.price}
+                    <ListGroupItem
+                      style={{
+                        backgroundColor: "hsl(20, 2%, 74%)"
+                      }}
+                    >
+                      Price:<a> € </a>
+                      {product.price}
                     </ListGroupItem>{" "}
                   </Card.Text>
                 </Card.Body>
