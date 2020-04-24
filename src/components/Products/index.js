@@ -12,17 +12,22 @@ export default function Products(props) {
       <CardColumns className="mt-5">
         {props.homepage.products.map(product => {
           return (
-            <Card border="dark" style={{ width: "18rem" }} key={product.id}>
+            <Card
+              style={{ width: "20rem" }}
+              border="dark"
+              //style={{ width: "18rem" }}
+              key={product.id}
+
+              //className="mr-3"
+            >
               <Card.Img variant="top" src={product.imageUrl} />
-              <Card.Body>
+              <Card.Body width={100} height={100}>
                 <Card.Title>{product.description}</Card.Title>
                 <Card.Text>€{product.price}</Card.Text>
-                <Card.Text>{product.productInfo}</Card.Text>
 
                 <Link to={`/products/${product.id}`}>
                   <Button variant="outline-secondary">See details</Button>
                 </Link>
-                <Card.Text>{product.city}</Card.Text>
               </Card.Body>
             </Card>
           );
@@ -31,3 +36,6 @@ export default function Products(props) {
     </div>
   );
 }
+
+//<Card.Text>{product.productInfo}</Card.Text>
+//<Card.Text>{product.city}</Card.Text>

@@ -25,6 +25,7 @@ export default function HomepageDetails() {
         image={homepage.imageUrl}
         showLink={false}
       />
+
       <Container>
         <Products homepage={homepage} />
       </Container>

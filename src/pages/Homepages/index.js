@@ -43,13 +43,19 @@ export default function HomePages() {
       >
         <h1>Wees Duurzaam </h1>
         <h3>Eenvoudig tweedehands meubels kopen & verkopen</h3>
-        <Form inline>
+        <br />
+        <br />
+        <Form inline className="mt-5">
           <FormControl
+            className="form-control col-lg-6 "
             type="text"
             placeholder="Search for a homepage"
-            className=" ml-sm-5"
+            // className=" ml-sm-5"
             onChange={e => setSearch(e.target.value)}
           />
+          <br />
+          <br />
+
           <Button variant="secondary" type="submit">
             <svg
               className="bi bi-search"

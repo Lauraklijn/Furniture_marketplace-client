@@ -12,8 +12,7 @@ export default function LoggedIn() {
     <div className="d-flex ml-5">
       <Nav.Item style={{ padding: ".5rem 1rem" }}>
         {" "}
-        Logged in as:
-        {user.name}
+        Logged in as: <a>{user.name} </a>
       </Nav.Item>
       <Button
         className="ml-auto"

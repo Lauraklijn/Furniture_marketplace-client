@@ -1,50 +1,49 @@
-import React, { Component } from "react";
-//import EmailForm from "./EmailForm";
-import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+
 import { createEmail } from "../../store/email/actions";
+import EmailForm from "./EmailForm";
 
-class EmailContainer extends Component {
-  state = {
-    name: "",
-    message: ""
+export default function Email() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(createEmail(id));
+  }, [dispatch, id]);
+
+  const handleClick = e => {
+    e.preventDefault();
+
+    if (e.target.id === "name") {
+      setName(e.target.value);
+    } else {
+      setMessage(e.target.value);
+      console.log("handleclick?", handleClick);
+    }
   };
 
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+  const handleSubmit = e => {
+    e.preventDefault();
   };
 
-  handleSubmit = event => {
-    event.preventDefault();
-    const ownerEmail = this.props.currentItem.user.email;
-    console.log("currentitem props from email", this.props.currentItem);
-
-    this.props.dispatch(createEmail(this.state, ownerEmail));
-    this.setState({
-      name: "",
-      message: ""
-    });
+  const dataToSubmit = {
+    name: name,
+    message: message
   };
 
-  render() {
-    return (
-      <div>
-        {/* <EmailForm
-          text={"itemForm"}
-          handleSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
-          values={this.state}
-        /> */}
-      </div>
-    );
-  }
+  return (
+    <div>
+      <EmailForm
+        text={"itemForm"}
+        handleSubmit={handleSubmit}
+        handleClick={handleClick}
+        values={name}
+      />
+    </div>
+  );
 }
-
-const mapStateToProps = state => {
-  // console.log("STATE IN EmailCon", state);
-  return {
-    user: state.user,
-    items: state.items
-  };
-};
-
-export default connect(mapStateToProps)(EmailContainer);
